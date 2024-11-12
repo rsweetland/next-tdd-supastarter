@@ -1,96 +1,66 @@
-<a href="https://demo-nextjs-with-supabase.vercel.app/">
-  <img alt="Next.js and Supabase Starter Kit - the fastest way to build apps with Next.js and Supabase" src="https://demo-nextjs-with-supabase.vercel.app/opengraph-image.png">
-  <h1 align="center">Next.js and Supabase Starter Kit</h1>
-</a>
 
-<p role="heading" align="center">
- The fastest way to build apps with Next.js and Supabase
+  <h1 align="center">Next.js v15 TDD Supastarter 🤩<br /> Next.js, Supabase, Drizzle, Jest </h1>
+  <p role="heading" align="center">
+  Build durable, tested, type-safe apps with Next.js 15 and Supabase 
 </p>
 
-<p align="center">
-  <a href="#features"><strong>Features</strong></a> ·
-  <a href="#demo"><strong>Demo</strong></a> ·
-  <a href="#deploy-to-vercel"><strong>Deploy to Vercel</strong></a> ·
-  <a href="#clone-and-run-locally"><strong>Clone and run locally</strong></a> ·
-  <a href="#feedback-and-issues"><strong>Feedback and issues</strong></a>
-  <a href="#more-supabase-examples"><strong>More Examples</strong></a>
+<p>This project integrates <a href="https://nextjs.org/blog/next-15">Next.js 15</a>, with the Vercel boilerplate examples from <a href="https://github.com/vercel/next.js/tree/v15.0.2/examples/with-supabase">with-supabase</a>, <a href="https://github.com/vercel/next.js/tree/v15.0.2/examples/with-jest">with-jest</a>, and <a href="https://github.com/vercel/examples/tree/%40vercel/examples-ui%402.0.3/storage/postgres-drizzle">postgres-drizzle</a></li>, fixes a few issues and sets up a hyper-efficient run-on-save, debugger-ready TDD workflow in VS Code.</p><br />
+
+<p>
+  <a href="#features"><strong>💎 Features</strong></a> ·
+  <a href="#clone-and-run"><strong>🚗 Clone and run</strong></a> ·
+  <a href="#testing"><strong>🧪 Streamlined testing</strong></a> ·
+  <a href="#feedback-and-issues"><strong>👋 Feedback and issues</strong></a>
 </p>
 <br/>
 
 ## Features
-
-- Works across the entire [Next.js](https://nextjs.org) stack
+- Run-on-save [Jest](https://jestjs.io/) tests with VS Code debugging preconfigured
+- Works across the [Next.js](https://nextjs.org) stack
   - App Router
-  - Pages Router
   - Middleware
   - Client
   - Server
-  - It just works!
-- supabase-ssr. A package to configure Supabase Auth to use cookies
+- Supabase auth, middleware and protected route example
 - Styling with [Tailwind CSS](https://tailwindcss.com)
 - Components with [shadcn/ui](https://ui.shadcn.com/)
-- Optional deployment with [Supabase Vercel Integration and Vercel deploy](#deploy-your-own)
-  - Environment variables automatically assigned to Vercel project
+- [Drizzle](https://orm.drizzle.team/) integration, which assumes the [Supabase with Next.js schema](https://supabase.com/docs/guides/getting-started/quickstarts/nextjs) 
 
-## Demo
+## Clone and run
 
-You can view a fully working demo at [demo-nextjs-with-supabase.vercel.app](https://demo-nextjs-with-supabase.vercel.app/).
-
-## Deploy to Vercel
-
-Vercel deployment will guide you through creating a Supabase account and project.
-
-After installation of the Supabase integration, all relevant environment variables will be assigned to the project so the deployment is fully functioning.
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fwith-supabase&project-name=nextjs-with-supabase&repository-name=nextjs-with-supabase&demo-title=nextjs-with-supabase&demo-description=This+starter+configures+Supabase+Auth+to+use+cookies%2C+making+the+user%27s+session+available+throughout+the+entire+Next.js+app+-+Client+Components%2C+Server+Components%2C+Route+Handlers%2C+Server+Actions+and+Middleware.&demo-url=https%3A%2F%2Fdemo-nextjs-with-supabase.vercel.app%2F&external-id=https%3A%2F%2Fgithub.com%2Fvercel%2Fnext.js%2Ftree%2Fcanary%2Fexamples%2Fwith-supabase&demo-image=https%3A%2F%2Fdemo-nextjs-with-supabase.vercel.app%2Fopengraph-image.png)
-
-The above will also clone the Starter kit to your GitHub, you can clone that locally and develop locally.
-
-If you wish to just develop locally and not deploy to Vercel, [follow the steps below](#clone-and-run-locally).
-
-## Clone and run locally
-
-1. You'll first need a Supabase project which can be made [via the Supabase dashboard](https://database.new)
-
-2. Create a Next.js app using the Supabase Starter template npx command
-
-   ```bash
-   npx create-next-app -e with-supabase
-   ```
-
-3. Use `cd` to change into the app's directory
-
-   ```bash
-   cd name-of-new-app
-   ```
-
-4. Rename `.env.example` to `.env.local` and update the following:
-
-   ```
-   NEXT_PUBLIC_SUPABASE_URL=[INSERT SUPABASE PROJECT URL]
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=[INSERT SUPABASE PROJECT API ANON KEY]
-   ```
-
-   Both `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_ANON_KEY` can be found in [your Supabase project's API settings](https://app.supabase.com/project/_/settings/api)
-
-5. You can now run the Next.js local development server:
+1. Clone this repo
+2. [Set up a Supabase project](https://supabase.com/docs/guides/getting-started/quickstarts/nextjs)
+3.  Copy `.env.example`  to `.env`  and update:<br />
+    * `NEXT_PUBLIC_SUPABASE_URL` 
+    * `NEXT_PUBLIC_SUPABASE_ANON_KEY`  Both can be found in [your Supabase project's API settings](https://app.supabase.*com/project/_/settings/api).
+    * `DATABASE_URL`  Find from the Supabase Dashboard > Connect
+4. You can now run the Next.js local development server:
 
    ```bash
    npm run dev
    ```
 
-   The starter kit should now be running on [localhost:3000](http://localhost:3000/).
-
-6. This template comes with the default shadcn/ui style initialized. If you instead want other ui.shadcn styles, delete `components.json` and [re-install shadcn/ui](https://ui.shadcn.com/docs/installation/next)
+ 5. This template comes with the default shadcn/ui style initialized. If you instead want other ui.shadcn styles, delete `components.json` and [re-install shadcn/ui](https://ui.shadcn.com/docs/installation/next)
 
 > Check out [the docs for Local Development](https://supabase.com/docs/guides/getting-started/local-development) to also run Supabase locally.
 
+## Testing
+
+<video width="100%" autoplay loop muted playsinline>
+  <source src="https://rsweetland-cdn.s3.us-east-1.amazonaws.com/tdd-supastar-demo.mp4" type="video/quicktime">
+  Your browser does not support the video tag.
+</video>
+
+Run and watch tests:
+
+```bash
+  npm run test:inspect
+```
+A VS Code `launch.json` file is included, allowing you to just open Debug sidebar to attach the VS Code.
+
+Just hit save to run tests. Add breakpoints. See to see what's going on. 🔬
+
+
 ## Feedback and issues
 
-Please file feedback and issues over on the [Supabase GitHub org](https://github.com/supabase/supabase/issues/new/choose).
-
-## More Supabase examples
-
-- [Next.js Subscription Payments Starter](https://github.com/vercel/nextjs-subscription-payments)
-- [Cookie-based Auth and the Next.js 13 App Router (free course)](https://youtube.com/playlist?list=PL5S4mPUpp4OtMhpnp93EFSo42iQ40XjbF)
-- [Supabase Auth and the Next.js App Router](https://github.com/supabase/supabase/tree/master/examples/auth/nextjs)
+This is not an official Supabase or Vercel project. It's just my own personal preference and dev workflow that I thought I would share. Feel free to create issues, fork and improve this project. Drop a ⭐️ if you'd like. Sometimes I am also hiring. Connect with me on Twitter <a href="https://twitter.com/rsweetland">@rsweetland</a>
