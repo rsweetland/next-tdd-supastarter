@@ -8,11 +8,7 @@ import '@testing-library/jest-dom'
 describe("Home", () => {
   it("renders a heading", async () => {
     render(await (Index()));
-
-    const heading = screen.getByRole("heading", {
-      name: /next steps/i,
-    });
-
-    expect(heading).toBeInTheDocument();
+    const notesOutput = screen.getByTestId("drizzle-test-result");
+    expect(notesOutput.innerHTML).toContain("Today I created a Supabase project.");
   });
 });
