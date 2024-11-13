@@ -15,7 +15,7 @@
 <br/>
 
 ## Features
-- Run-on-save [Jest](https://jestjs.io/) tests with VS Code debugging preconfigured
+- Run-on-save [Jest](https://jestjs.io/) tests with VS Code debugging preconfigured (video below 📺)
 - Works across the [Next.js](https://nextjs.org) stack
   - App Router
   - Middleware
@@ -46,10 +46,12 @@
 
 ## Testing
 
-<video width="100%" autoplay loop muted playsinline>
-  <source src="https://rsweetland-cdn.s3.us-east-1.amazonaws.com/tdd-supastar-demo.mp4" type="video/quicktime">
-  Your browser does not support the video tag.
-</video>
+<p align="center">
+  
+[TDD Workflow](https://github.com/user-attachments/assets/06b87ae3-1f16-4b77-b8b9-5d0eb181462e)
+
+</p>
+
 
 Run and watch tests:
 
