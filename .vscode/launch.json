@@ -5,10 +5,17 @@
     "version": "0.2.0",
     "configurations": [
     {
+        "name": "Attach to Jest",
+        "port": 9229,
         "type": "node",
         "request": "attach",
-        "name": "Attach to Jest",
-        "port": 9229
-    }
+    },
+    {
+      "name": "Debug Next.js",
+      "port": 9230,
+      "request": "attach",
+      "skipFiles": ["<node_internals>/**"],
+      "type": "node"
+    },
     ]
 }

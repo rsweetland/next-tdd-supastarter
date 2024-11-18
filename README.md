@@ -16,6 +16,7 @@
 
 ## Features
 - Run-on-save [Jest](https://jestjs.io/) tests with VS Code debugging preconfigured (video below 📺)
+- Debugger set up for both test and dev scripts. Just addd breakpoints
 - Works across the [Next.js](https://nextjs.org) stack
   - App Router
   - Middleware
@@ -66,3 +67,9 @@ Just hit save to run tests. Add breakpoints. See to see what's going on. 🔬
 ## Feedback and issues
 
 This is not an official Supabase or Vercel project. It's just my own personal preference and dev workflow that I thought I would share. Feel free to create issues, fork and improve this project. Drop a ⭐️ if you'd like. Sometimes I am also hiring. Connect with me on Twitter <a href="https://twitter.com/rsweetland">@rsweetland</a>
+
+
+## Todo
+
+- [ ] Add [drizzle migrations](https://orm.drizzle.team/docs/migrations)
+- [ ] `npm run dev:inspect`
